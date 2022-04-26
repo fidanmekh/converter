@@ -2,78 +2,72 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
 </head>
 
 <body>
-  <div class="title">
-    <img src="img/logo.svg" alt="">
-    <ul>
-      <li> <a href="">БАНК</a> </li>
-      <li> <a href="">БИЗНЕС</a> </li>
-      <li> <a href="">ИНВЕСТИЦИИ</a> </li>
-      <li> <a href="">СТРАХОВАНИ</a></li>
-      <li> <a href="">МОБАЙЛ</a></li>
-      <li><a href="">ПУТЕШЕСТВИЯ</a></li>
-      <li><a href="">РАЗВЛЕЧЕНИЯ</a></li>
-    </ul>
-
-    <div class="voyti">
-      ВОЙТИ
+    <div class="title">
+        <img src="symbol/Asset.png" alt="">
+        <ul>
+          <li> <a href="">БАНК</a> </li>
+          <li> <a href="">БИЗНЕС</a> </li>
+          <li> <a href="">ИНВЕСТИЦИИ</a> </li>
+          <li> <a href="">СТРАХОВАНИ</a></li>
+          <li> <a href="">МОБАЙЛ</a></li>
+          <li><a href="">ПУТЕШЕСТВИЯ</a></li>
+          <li><a href="">РАЗВЛЕЧЕНИЯ</a></li>
+        </ul>
+    
+        <div class="voyti">
+          ВОЙТИ
+        </div>
+        <i class="hamburger fa fa-bars"></i>
     </div>
 
-  </div>
-  <h1>Конвертер валют онлайн</h1>
+    <main>
+        <h1>Конвертер валют онлайн</h1>
+        <div class="container">
+            <div class="boxs">
+                <div class="box-left">
+                    <h6>У меня есть </h6>
+                    <ul class="currency">
+                        <li class="active">RUB</li>
+                        <li>USD</li>
+                        <li>EUR</li>
+                        <li>GBP</li>
+                    </ul>
+                    <div class="calc">
+                        <input class="money" type="text" value="100">
+                        <div class="const-money"></div>
+                    </div>
+                </div>
 
-  <form id="converter-form" class="converter-form">
-
-    <div class="controls-group">
-        <label for="from" class="umenya"> У меня есть </label>
-        <div class="inputsCont" id="from">
-            <input type="radio" name="from" id="rub-from" value="RUB" checked>
-            <label for="rub-from">RUB</label>
-            <input type="radio" name="from" id="usd-from" value="USD">
-            <label for="usd-from">USD</label>
-            <input type="radio" name="from" id="eur-from" value="EUR">
-            <label for="eur-from">EUR</label>
-            <input type="radio" name="from" id="gbp-from" value="GBP">
-            <label for="gbp-from">GBP</label>
+                <div class="box-right">
+                    <h6>Хочу приобрести</h6>
+                    <ul class="currency">
+                        <li>RUB</li>
+                        <li class="active">USD</li>
+                        <li>EUR</li>
+                        <li>GBP</li>
+                    </ul>
+                    <div class="calc">
+                        <input class="money" type="text">
+                        <div class="const-money"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </main>
 
-        <div class="card">
-            <input class="converter-input" name="from-amount" value="1">
-            <p id="from-rate">1 RUB = 0.0135 USD</p>
-        </div>
-    </div>
-
-    <div class="controls-group">
-        <label for="to" class="xocu">Хочу приобрести </label>
-        <div class="inputsCont" id="to">
-            <input type="radio" name="to" id="rub-to" value="RUB">
-            <label for="rub-to">RUB</label>
-            <input type="radio" name="to" id="usd-to" value="USD" checked>
-            <label for="usd-to">USD</label>
-            <input type="radio" name="to" id="eur-to" value="EUR">
-            <label for="eur-to">EUR</label>
-            <input type="radio" name="to" id="gbp-to" value="GBP">
-            <label for="gbp-to">GBP</label>
-        </div>
-
-        <div class="card">
-            <input class="converter-input" name="to-amount">
-            <p id="to-rate">1 RUB = 0.0135 USD</p>
-        </div>
-    </div>
-
-</form>
-
-  </div>
-
-   <script src="https://unpkg.com/imask"></script>
-  <script src="./src/script.js"></script>
+    <script src="./main.js"></script>
 </body>
+
 </html>
